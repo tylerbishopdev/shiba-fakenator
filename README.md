@@ -55,7 +55,6 @@ I, 'name', am currently speaking and consent Tavus to create an AI clone of me b
 
 Record a video with really good quality and a good microphone; ensuring you speak clearly, don't have anything covering your face and are properly lit. Ensure quality audio and no echoes etc. Then, record the video with the script I provided Jack, upload the video to Vercel blob or anywhere on the web (Google Drive, Dropbox, etc). The link you upload must be them one you uploaded to the web and should auto-download the video when you throw it iun a web browser. In Vercel, go to storage > blob > tylertest.mp4 for an example. there'll be a copy url button that provides the right url if you use vercel blog for your upload. When you have that url, thats what you will paste into the file upload ionpout on the application once it's running and the ai will begin training a deepfake of you that you can use to make videos with.
 
-
 ## Script for recording
 
 ```markdown

@@ -53,6 +53,10 @@
   .upload-status,
   .instructions {
     margin-bottom: 20px;
+    border: #000;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f8f8f8;
   }
 
   h2 {

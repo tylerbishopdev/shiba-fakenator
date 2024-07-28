@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shiba Fakenator Trainer</title>
     <link href="styles.css" rel="stylesheet">
-    <link href="output.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="flex flex-col items-center justify-center border border-black rounded gap-8 p-8 md:p-12">
+    <div class="flex flex-col items-center justify-centergap-8 p-8 md:p-12">
       <div
         class="rounded-lg border bg-card upload-container shadow-sm w-full max-w-2xl"
         data-v0-t="card"
@@ -30,14 +30,14 @@
         <div>
           <div>
 
-      <form id="replicaForm" style="text-align: center">
+      <form id="replicaForm" class="text-center p-8 border border-black rounded">
         <label for="trainVideoUrl">Training Video URL:</label>
-        <input type="url" id="trainVideoUrl" required />
-        <button type="submit">Train My ShibaFake!</button>
+        <input type="url" id="trainVideoUrl" required class="border border-black rounded mx-3" />
+        <button type="submit" class="rounded p-2 bg-black text-white font-bold">Train My ShibaFake!</button>
       </form>
     </div>
-    <div class="flex flex-col items-center justify-center p-4">
-      <h2 class="text-center mx-auto" >Results</h2>
+    <div class="flex flex-col items-center justify-center p-8">
+      <h2 class="text-center mx-auto border-black border rounded p-8 w-full" >Results</h2>
       <div id="result"></div>
       <div id="error" style="color: red;"></div>
       <div id="progress" class="progress"></div>

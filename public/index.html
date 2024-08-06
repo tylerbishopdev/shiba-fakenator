@@ -4,54 +4,300 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shiba Fakenator Trainer</title>
-    <link href="styles.css" rel="stylesheet">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body class="tracking-tight">
-    <div class="flex flex-col items-center justify-centergap-8 w-2/3 mx-auto p-8 md:p-12 border rounded-lg shadow-lg shadow-pink-300 border-gray-300 bg-gradient-to-r from-yellow-400 to-pink-400">
-      <div
-        class="rounded-lg  w-full max-w-2xl"
-        data-v0-t="card"
-      >
-        <div class="flex flex-col space-y-1.5 p-6">
-          <h1 class="text-center mx-auto mt-4 font-extrabold text-5xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-pink-200">
+  <body class="tracking-tight mx-auto">
+    <div
+      class="flex flex-col items-center justify-center gap-4 w-3/4 mx-auto p-8 md:p-12 border rounded-lg shadow-lg shadow-pink-300 border-pink-300 bg-gradient-to-r from-yellow-400 to-pink-400"
+    >
+      <div class="rounded-lg w-full max-w-4xl mx-auto" data-v0-t="card">
+        <div class="flex flex-col space-y-1.5 p-6 mx-auto">
+          <h1
+            class="text-center mx-auto mt-4 font-extrabold lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-900 to-pink-700"
+          >
             Shiba Fakenator Trainer
           </h1>
         </div>
+        <div
+          class="mx-auto w-full mt-4 mb-8 p-6 bg-white border border-indigo-200 rounded-lg"
+        >
+          <div class="divide-y divide-pink-900">
+            <details class="group" closed>
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-black text-pink-700 group-open:text-primary-500"
+              >
+                Directions For Capturing Your Fake
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="block h-5 w-5 group-open:hidden"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="hidden h-5 w-5 group-open:block"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 12h-15"
+                    />
+                  </svg>
+                </div>
+              </summary>
+              <div class="pb-4 text-secondary-500">
+                <p class="bg-white px-2 py-2 font-mono rounded-lg">
+                  <span class="font-bold">Step 1:</span> The recording you
+                  upload MUST include this exact recording of you directly
+                  consenting to the cloning before you read the script. The
+                  script is as follows:
+                  <br />
+                  <br />
+                  <span class="italic font-gray-700 text-sm">
+                    " I, 'name', am currently speaking and consent Tavus to
+                    create an AI clone of me by using the audio and video
+                    samples I provide. I understand that this AI clone can be
+                    used to create videos that look and sound like me."</span
+                  >
+                  <br />
+                  <br />
+                  <span class="font-bold">Step 2:</span> Record a video with
+                  really good quality and a good microphone; ensuring you speak
+                  clearly, don't have anything covering your face and are
+                  properly lit. Ensure quality audio and no echoes etc. Then,
+                  record the video with the script provided. Save the video as
+                  an mp4.
+                  <br />
+                  <br />
+                  <span class="font-bold">Step 3:</span> Now, upload the video
+                  to a publicly available place that can be accessed via a url.
+                  The link you input below must be the one you just uploaded to
+                  the web and should auto-download the .mp4 file autopmatically
+                  in the browser when you enter that url to the browser. To use
+                  Vercel, go to storage > blob > tylertest.mp4 for an example.
+                  there'll be a copy url button that provides the right url if
+                  you use vercel blog for your upload. When you have that url,
+                  thats what you will paste into the file upload ionpout on the
+                  application once it's running and the ai will begin training a
+                  deepfake of you that you can use to make videos with.
+                </p>
+              </div>
+            </details>
+            <details class="group" closed>
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-black text-pink-700 group-open:text-primary-500"
+              >
+                Script For Recording
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="block h-5 w-5 group-open:hidden"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="hidden h-5 w-5 group-open:block"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 12h-15"
+                    />
+                  </svg>
+                </div>
+              </summary>
+              <div class="pb-4 text-secondary-500">
+                <p class="bg-white px-6 py-4 font-mono rounded-lg">
+                  In a bustling city where the echoes of courtrooms and whispers
+                  of justice intertwined, prosecutors had opened a massive
+                  investigation into allegations of fixing games and illegal
+                  betting. The legal system, like different telescope designs,
+                  aimed to expose the truth, each method possessing unique
+                  strengths and weaknesses. As the investigation unfolded, the
+                  need to strengthen the education of good lawyers became
+                  evident. Feedback from seasoned professionals became crucial;
+                  it had to be timely and accurate throughout the project. Just
+                  like humans judging distance by the relative sizes of objects,
+                  the legal team sought clarity amid the complex web of
+                  allegations. Yet, in the grand scheme of things, this
+                  information seemed insignificant. Churches, however, insisted
+                  on addressing the issue, emphasizing that they should not
+                  encourage such activities or make them look harmless. It was a
+                  moral stance against the backdrop of legal intricacies. Amidst
+                  the legal turmoil, individuals found solace in unrelated
+                  pursuits, such as learning about setting up wireless network
+                  configurations. The city's residents, like the varied ways to
+                  consume food, could choose to eat their worries fresh, cooked,
+                  or fermented. Rumors circulated that those who tended to think
+                  creatively were somehow different, and if true, they could be
+                  the key to unlocking the mystery behind the alleged
+                  game-fixing. A creative perspective could be the honeymoon of
+                  clarity in this legal fog. In the courtroom, as the trial
+                  progressed, the atmosphere was heated. The sugar syrup of
+                  evidence dripped slowly, creating very fine strands of truth
+                  that draped over the handles of justice. The accused wiped
+                  their brows with their forearms, grappling with the pressure.
+                  The legal system, however, had its quirks. Instead of fixing
+                  the issue at hand, they gave it a nickname, a moniker that
+                  belied the gravity of the charges. But amid the legal
+                  intricacies, about half the people who were infected with the
+                  allegations also lost weight, shedding the burden of deceit.
+                  The second half of the legal saga focused on argument and
+                  essay writing, a meticulous process of presenting facts and
+                  weaving narratives. Funding became an issue after the fact,
+                  leaving the legal team to reflect on the odd fashion choice of
+                  addressing problems only when they surfaced. Yet, despite the
+                  challenges, there was a prevailing sentiment of encouragement.
+                  "Let us encourage each other," became the rallying cry. In the
+                  end, as the legal battle continued, individuals found strength
+                  in unity, understanding that they had the means to help
+                  themselves in the pursuit of truth and justice.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+
         <div class="p-6 bg-gray-100 border border-gray-300 rounded-lg">
-      <p class="text-center mt-4 w-4/5 mx-auto p-2 " >
-        Train your ShibaFake replica by providing a video URL uploaded to a
-        the web as a downloadable mp4 file.  (ex. upload
-        to Vercel Blob).
-      <p/>
- 
-
-   
-      <div class="flex flex-col items-center justify-center p-4">
-        <div>
-          <div>
-
-      <form id="replicaForm" class="text-center p-8">
-        <label for="trainVideoUrl">Submit Link To Video:</label>
-        <input type="url" id="trainVideoUrl" required class="border border-black rounded text-lg  my-1 mx-3" />
-        <button type="submit" class="rounded p-2 bg-black text-white font-medium text-sm">Train My ShibaFake</button>
-        <p class="text-center text-xs font-light text-yellow-900 w-4/5 mx-auto mt-4" >
-          Make sure the uploaded video included the consent statement at the start and was recorded using the script sample here
-         <p/>
-      </form>
-      
+          <p class="text-center mt-4 w-4/5 mx-auto p-2">
+            Train your ShibaFake replica by providing a video URL uploaded to a
+            the web as a downloadable mp4 file. (ex. upload to Vercel Blob).
+          </p>
+          <div class="flex flex-col items-center justify-center p-4">
+            <form id="replicaForm" class="text-center p-8">
+              <label for="trainVideoUrl">Submit Link To Video:</label>
+              <input
+                type="url"
+                id="trainVideoUrl"
+                required
+                class="border border-black rounded text-lg my-1 mx-3"
+              />
+              <button
+                type="submit"
+                class="rounded p-2 bg-black text-white font-medium text-sm"
+              >
+                Train My ShibaFake
+              </button>
+              <p
+                class="text-center text-xs font-light text-yellow-900 w-4/5 mx-auto mt-4"
+              >
+                Make sure the uploaded video included the consent statement at
+                the start and was recorded using the script sample here.
+              </p>
+            </form>
+            <div
+              class="flex flex-col items-center justify-center border-black border rounded p-4 w-full"
+            >
+              <h2 class="text-center mx-auto py-2 font-black">Results</h2>
+              <div id="result"></div>
+              <div id="error" class="text-red-500"></div>
+              <div id="progress" class="progress"></div>
+              <div id="downloadLink" style="display: none"></div>
+              <div id="modelStatus" style="display: none"></div>
+              <div id="trainStatus" style="display: none"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full max-w-4xl mt-8 border-t-2 border-pink-900 " data-v0-t="card">
+        <div class="flex flex-col space-y-1.5 p-6 mt-12">
+          <h2 class="text-center mx-auto mt-4 mb-8 font-extrabold lg:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-900 to-pink-700">
+            Generate Video With ShibaFake
+          </h2>
+          <div class="divide-y divide-pink-900 bg-white rounded-lg p-4 my-4">
+            <details class="group" closed>
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-black text-pink-700 group-open:text-primary-500"
+              >
+                Directions For Capturing Your Fake
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="block h-5 w-5 group-open:hidden"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="hidden h-5 w-5 group-open:block"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 12h-15"
+                    />
+                  </svg>
+                </div>
+              </summary>
+              <p class="bg-white px-6 py-4 font-mono rounded-lg">
+                It takes around 6 hours after using the upload above to generate your ShibaFake. Once that time has passed and the replicas is available, you can use the form below to select your trained replica and enter a script to generate a video with your ShibaFake. The video will be generated and available for download after you've submitted the script below and the process is complete.
+                
+              </p>
+            </details>
+            </div>
+        </div>
+        <div class="p-6 bg-gray-100 border border-gray-300 rounded-lg">
+          <form id="videoForm" class="text-center p-8">
+            <label class="block text-gray-700 text-xl font-bold mb-2" for="scriptInput">Enter Script:</label>
+            <textarea id="scriptInput" required class="border border-black rounded text-lg h-96 my-1 mx-3 w-full"></textarea>
+            <label for="displayReplica">Select Replica:</label>
+           
+            <select class="my-4 p-1 px-2 w-3/4 mx-auto bg-gray-300 rounded"  id="displayReplica" required ></select>
+       
+            <button type="submit" class="rounded p-2 bg-black text-white font-medium text-sm">Generate Video</button>
+          </form>
+          <div class="flex flex-col items-center justify-center border-black border rounded p-4 w-full">
+            <h2 class="text-center mx-auto py-2 font-black">Video Generation Status</h2>
+            <div id="videoResult"></div>
+            <div id="videoError" class="text-red-500"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="flex flex-col items-center justify-center  border-black border rounded p-4 w-full">
-      <h2 class="text-center mx-auto py-2 font-black" >Results</h2>
-      <div id="result"></div>
-      <div id="error" style="color: red;"></div>
-      <div id="progress" class="progress"></div>
-      <div id="downloadLink" style="display: none;"></div>
-      <div id="modelStatus" style="display: none;"></div>
-      <div id="trainStatus" style="display: none;"></div>
     </div>
-  </div>
-  </div>
+    
     <script src="client.js"></script>
   </body>
 </html>

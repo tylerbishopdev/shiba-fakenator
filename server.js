@@ -2,7 +2,7 @@ import 'dotenv/config';
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
-import { createReplica } from './src/api.js';
+import { createReplica, getReplicas } from './src/api.js';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -12,7 +12,7 @@ const __dirname = dirname(__filename);
 
 const PORT = process.env.PORT || 3000;
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
     console.log(`Received request: ${req.method} ${req.url}`);
     
     if (req.method === 'GET' && req.url === '/') {
@@ -66,6 +66,16 @@ const server = http.createServer((req, res) => {
                 res.end(JSON.stringify({ error: error.message }));
             }
         });
+    } else if (req.method === 'GET' && req.url === '/get-replicas') {
+        try {
+            const replicaIds = await getReplicas();
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify(replicaIds));
+        } catch (error) {
+            console.error('Error getting replicas:', error);
+            res.writeHead(500, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ error: error.message }));
+        }
     } else {
         res.writeHead(404);
         res.end('Not Found');

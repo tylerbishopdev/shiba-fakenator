@@ -12,7 +12,7 @@
   </head>
   <body class="tracking-tight mx-auto">
     <div
-      class="flex flex-col items-center justify-center gap-4 w-3/4 mx-auto p-8 md:p-12 border rounded-lg shadow-lg shadow-pink-300 border-pink-300 bg-gradient-to-r from-yellow-400 to-pink-400"
+      class="flex flex-col drop-shadow-lg shadow-pink-300 items-center justify-center gap-4 w-3/4 mx-auto p-8 md:p-12 border rounded-lg border-pink-300 bg-gradient-to-r from-yellow-400 to-pink-400"
     >
       <div class="rounded-lg w-full max-w-4xl mx-auto" data-v0-t="card">
         <div class="flex flex-col space-y-1.5 p-6 mx-auto">
@@ -23,7 +23,7 @@
           </h1>
         </div>
         <div
-          class="mx-auto w-full mt-4 mb-8 p-6 bg-white border border-indigo-200 rounded-lg"
+          class="mx-auto w-full mt-4 mb-4 p-4 bg-gray-100 border border-indigo-200 rounded-lg"
         >
           <div class="divide-y divide-pink-900">
             <details class="group" closed>
@@ -63,7 +63,7 @@
                 </div>
               </summary>
               <div class="pb-4 text-secondary-500">
-                <p class="bg-white px-2 py-2 font-mono rounded-lg">
+                <p class="bg-gray-100 px-2 py-2 font-mono rounded-lg">
                   <span class="font-bold">Step 1:</span> The recording you
                   upload MUST include this exact recording of you directly
                   consenting to the cloning before you read the script. The
@@ -137,7 +137,7 @@
                 </div>
               </summary>
               <div class="pb-4 text-secondary-500">
-                <p class="bg-white px-6 py-4 font-mono rounded-lg">
+                <p class="bg-gray-100 px-6 py-4 font-mono rounded-lg">
                   In a bustling city where the echoes of courtrooms and whispers
                   of justice intertwined, prosecutors had opened a massive
                   investigation into allegations of fixing games and illegal
@@ -189,6 +189,11 @@
         </div>
 
         <div class="p-6 bg-gray-100 border border-gray-300 rounded-lg">
+          <h2
+            class="text-center mx-auto mt-4 mb-8 font-extrabold lg:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-900 to-pink-700"
+          >
+            Generate Your Own ShibaFake
+          </h2>
           <p class="text-center mt-4 w-4/5 mx-auto p-2">
             Train your ShibaFake replica by providing a video URL uploaded to a
             the web as a downloadable mp4 file. (ex. upload to Vercel Blob).
@@ -229,12 +234,14 @@
           </div>
         </div>
       </div>
-      <div class="w-full max-w-4xl mt-8 border-t-2 border-pink-900 " data-v0-t="card">
-        <div class="flex flex-col space-y-1.5 p-6 mt-12">
-          <h2 class="text-center mx-auto mt-4 mb-8 font-extrabold lg:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-900 to-pink-700">
-            Generate Video With ShibaFake
+      <div class="w-2/3 mt-8 border-t-2 border-pink-900" data-v0-t="card">
+        <div class="flex flex-col mt-12 rounded-lg">
+          <h2
+            class="text-center mx-auto mt-4 mb-8 font-extrabold lg:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-900 to-pink-700"
+          >
+            Generate Video Using Your ShibaFake
           </h2>
-          <div class="divide-y divide-pink-900 bg-white rounded-lg p-4 my-4">
+          <div class="divide-y divide-pink-900 bg-gray-100 rounded-lg p-4 my-4">
             <details class="group" closed>
               <summary
                 class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-black text-pink-700 group-open:text-primary-500"
@@ -271,33 +278,119 @@
                   </svg>
                 </div>
               </summary>
-              <p class="bg-white px-6 py-4 font-mono rounded-lg">
-                It takes around 6 hours after using the upload above to generate your ShibaFake. Once that time has passed and the replicas is available, you can use the form below to select your trained replica and enter a script to generate a video with your ShibaFake. The video will be generated and available for download after you've submitted the script below and the process is complete.
-                
+              <p class="bg-gray-100 px-6 py-4 font-mono rounded-lg">
+                It takes around 6 hours after using the upload above to generate
+                your ShibaFake. Once that time has passed and the replicas is
+                available, you can use the form below to select your trained
+                replica and enter a script to generate a video with your
+                ShibaFake. The video will be generated and available for
+                download after you've submitted the script below and the process
+                is complete.
               </p>
             </details>
-            </div>
+          </div>
         </div>
         <div class="p-6 bg-gray-100 border border-gray-300 rounded-lg">
-          <form id="videoForm" class="text-center p-8">
-            <label class="block text-gray-700 text-xl font-bold mb-2" for="scriptInput">Enter Script:</label>
-            <textarea id="scriptInput" required class="border border-black rounded text-lg h-96 my-1 mx-3 w-full"></textarea>
-            <label for="displayReplica">Select Replica:</label>
-           
-            <select class="my-4 p-1 px-2 w-3/4 mx-auto bg-gray-300 rounded"  id="displayReplica" required ></select>
-       
-            <button type="submit" class="rounded p-2 bg-black text-white font-medium text-sm">Generate Video</button>
+          <form id="videoForm" class="text-left p-8">
+            <label
+              for="scriptInput"
+              class="block my-2 mx-auto font-mono text-xl"
+              >Enter Script:</label
+            >
+            <textarea
+              id="scriptInput"
+              required
+              class="border-2 border-gray-600 my-4 bg-gray-200 rounded text-lg my-1 mx-3 w-full inputBox input"
+            ></textarea>
+            <label
+              for="replicaSelect"
+              class="block my-2 mx-auto font-mono text-xl"
+              >Select Replica:</label
+            >
+            <select
+              id="replicaSelect"
+              required
+              class="border border-black bg-gray-200 rounded text-lg my-1 mx-3 w-full my-4"
+            ></select>
+            <button
+              type="submit"
+              class="rounded p-3 bg-pink-700 text-white font-bold text-md mt-4 mx-4"
+            >
+              Generate Video
+            </button>
           </form>
-          <div class="flex flex-col items-center justify-center border-black border rounded p-4 w-full">
-            <h2 class="text-center mx-auto py-2 font-black">Video Generation Status</h2>
+          <div
+            class="flex flex-col items-center justify-center border-black border rounded p-4 w-full"
+          >
+            <h2 class="text-center mx-auto py-2 font-black">
+              Video Generation Status
+            </h2>
             <div id="videoResult"></div>
             <div id="videoError" class="text-red-500"></div>
           </div>
         </div>
       </div>
+      <div class="w-2/3 mt-8 border-t-2 border-pink-900" data-v0-t="card">
+        <div class="flex flex-col mt-12 rounded-lg">
+          <h2
+            class="text-center mx-auto mt-4 mb-8 font-extrabold lg:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-900 to-pink-700"
+          >
+            Video Status & Downloads
+          </h2>
+          <div class="bg-gray-100 rounded-lg p-4 my-4">
+            <details class="group" closed>
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-black text-pink-700 group-open:text-primary-500"
+              >
+                Downloading Videos
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="block h-5 w-5 group-open:hidden"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="hidden h-5 w-5 group-open:block"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 12h-15"
+                    />
+                  </svg>
+                </div>
+              </summary>
+              <p class="bg-gray-100 px-6 py-4 font-mono rounded-lg">
+                After generating a ShibaFake and generating a video, you can
+                review the video processing and generation status below. Once
+                the video is ready, you can use the Download Video button to
+                download the mp4 of your generated video.
+              </p>
+            </details>
+          </div>
+          <div class="flex flex-col items-center justify-center w-full">
+            <div id="videosList" class="w-full font-mono text-gray -900"></div>
+
+            <div id="videosError" class="text-red-500"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-    
+
     <script src="client.js"></script>
   </body>
 </html>

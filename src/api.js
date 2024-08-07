@@ -34,7 +34,7 @@ export async function getReplicas() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'x-api-key': process.env.TAVUS_API_KEY
+                'x-api-key': process.env.TAVUS_API_KEY,
             }
         });
         
@@ -58,3 +58,55 @@ export async function getReplicas() {
         throw new Error(`Error getting replicas: ${error.message}`);
     }
 }
+
+export async function generateVideo(script, replicaId) {
+    try {
+        console.log('Sending request to Tavus API with script:', script, 'and replicaId:', replicaId);
+        const response = await fetch(`${API_URL}/${replicaId}/generate-video`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-api-key': process.env.TAVUS_API_KEY
+            },
+            body: JSON.stringify({ script })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        console.log('Received response from Tavus API:', data);
+        return data;
+    } catch (error) {
+        console.error('Error in generateVideo:', error);
+        throw new Error(`Error generating video: ${error.message}`);
+    }
+}
+export async function getVideos() {
+    try {
+        const response = await fetch(`${API_URL}/videos`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-api-key': process.env.TAVUS_API_KEY
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        throw new Error(`Error fetching videos: ${error.message}`);
+    }
+}
+export default {
+    createReplica,
+    getReplicas,
+    generateVideo,
+    getVideos,
+};
+//     
